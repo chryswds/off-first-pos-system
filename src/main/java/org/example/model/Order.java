@@ -13,9 +13,9 @@ public class Order {
 
 
     public static class OrderItem {
-        private final String itemName;
-        private final double price;
-        private final int quantity;
+        private  String itemName;
+        private double price;
+        private int quantity;
 
         public OrderItem(String itemName, double price, int quantity) {
             this.itemName = itemName;
@@ -26,12 +26,32 @@ public class Order {
         public String getItemName() {
             return itemName;
         }
+
+        public void setItemName(String itemName) {
+            this.itemName = itemName;
+        }
+
+
         public double getPrice() {
             return price;
+        }
+
+        public void setPrice(double price) {
+            this.price = price;
         }
         public int getQuantity() {
             return quantity;
         }
+
+        public void setQuantity(int quantity) {
+            this.quantity = quantity;
+        }
+
+        public double getTotalPrice() {
+            return price * quantity;
+        }
+
+
 
 
     }
